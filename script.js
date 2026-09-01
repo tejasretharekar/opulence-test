@@ -22,6 +22,9 @@ const form = document.getElementById('contact-form');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const feedback = form.querySelector('.form-feedback');
-  feedback.textContent = 'Thank you. Your enquiry is ready to send - we will be in touch shortly.';
-  form.reset();
+  const data = new FormData(form);
+  const subject = encodeURIComponent('Website enquiry from ' + data.get('name'));
+  const body = encodeURIComponent('Name: ' + data.get('name') + '\nEmail: ' + data.get('email') + '\n\nProject details:\n' + data.get('message'));
+  feedback.textContent = 'Opening your email app so you can send the enquiry directly to our team.';
+  window.location.href = 'mailto:info@opulencepower.com?subject=' + subject + '&body=' + body;
 });
