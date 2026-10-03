@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" fill="none" class="brand-logo-svg">
+  <!-- Circular Dynamic Emblem -->
+  <g transform="translate(10, 5)">
+    <!-- Outer Circle Ring -->
+    <circle cx="45" cy="45" r="42" stroke="url(#blue-grad)" stroke-width="2.5" fill="none" />
+    
+    <!-- Top-Left Green Ribbon -->
+    <path d="M 45 10 A 35 35 0 0 0 16 52 L 28 40 A 20 20 0 0 1 45 25 C 55 25 64 30 68 38 L 78 28 A 35 35 0 0 0 45 10 Z" fill="#5cb82c" />
+    <path d="M 18 52 C 20 58 24 64 28 68 L 38 58 C 34 54 32 50 30 44 Z" fill="#5cb82c" />
+
+    <!-- Bottom-Right Cyan/Blue Ribbon -->
+    <path d="M 45 80 A 35 35 0 0 0 74 38 L 62 50 A 20 20 0 0 1 45 65 C 35 65 26 60 22 52 L 12 62 A 35 35 0 0 0 45 80 Z" fill="#0088cc" />
+    <path d="M 72 38 C 70 32 66 26 62 22 L 52 32 C 56 36 58 40 60 46 Z" fill="#0088cc" />
+    
+    <!-- Subtle Energy Core -->
+    <circle cx="45" cy="45" r="7" fill="none" stroke="#5cb82c" stroke-width="2" opacity="0.6"/>
+  </g>
+
+  <!-- Typography: OPULENCE POWER PRIVATE LIMITED -->
+  <text x="110" y="44" font-family="'Plus Jakarta Sans', 'Inter', 'Segoe UI', sans-serif" font-size="20" font-weight="800" letter-spacing="2.5" fill="currentColor">
+    <tspan fill="currentColor">OPULENCE </tspan>
+    <tspan fill="#5cb82c">POWER </tspan>
+    <tspan font-size="14" font-weight="700" letter-spacing="1.8" fill="currentColor">PVT. LTD.</tspan>
+  </text>
+
+  <!-- Tagline: ➤ EVOLVING WITH ENERGY ◄ -->
+  <g transform="translate(110, 68)">
+    <path d="M 0 0 L 10 -4 L 7 0 L 10 4 Z" fill="#f57c00" />
+    <text x="18" y="3" font-family="'Plus Jakarta Sans', 'Inter', 'Segoe UI', sans-serif" font-size="10.5" font-weight="800" letter-spacing="2.8" fill="#f57c00">EVOLVING WITH ENERGY</text>
+    <path d="M 198 0 L 188 -4 L 191 0 L 188 4 Z" fill="#f57c00" />
+  </g>
+
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="blue-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5cb82c" />
+      <stop offset="50%" stop-color="#0088cc" />
+      <stop offset="100%" stop-color="#0088cc" />
+    </linearGradient>
+  </defs>
+</svg>
