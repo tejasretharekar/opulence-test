@@ -28,3 +28,12 @@ form.addEventListener('submit', (event) => {
   feedback.textContent = 'Opening your email app so you can send the enquiry directly to our team.';
   window.location.href = 'mailto:info@opulencepower.com?subject=' + subject + '&body=' + body;
 });
+
+const topbar = document.querySelector('.topbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    topbar.classList.add('scrolled');
+  } else {
+    topbar.classList.remove('scrolled');
+  }
+});
