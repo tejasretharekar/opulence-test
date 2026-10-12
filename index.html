@@ -197,6 +197,103 @@
         </div>
       </section>
 
+      <section id="calculator" class="calculator page-section">
+        <div class="calculator-wrapper">
+          <div class="calculator-header">
+            <div class="calculator-header-left">
+              <p class="eyebrow">Instant Feasibility</p>
+              <h2>Discover Your<br /><em>Solar Potential.</em></h2>
+            </div>
+            <div class="calculator-header-right">
+              <p class="calculator-intro">Get a quick, preliminary estimate of how much you could save by switching to solar. Enter your average monthly electricity bill below.</p>
+            </div>
+          </div>
+
+          <div class="calculator-card">
+            <form id="solar-calc-form" class="calc-form" novalidate>
+              <div class="calc-input-block">
+                <label for="monthly-bill" class="calc-label">Average monthly electricity bill (₹)</label>
+                <div class="calc-input-wrapper">
+                  <div class="calc-input-field-wrap">
+                    <span class="calc-currency-symbol" aria-hidden="true">₹</span>
+                    <input
+                      type="number"
+                      id="monthly-bill"
+                      name="monthlyBill"
+                      class="calc-input"
+                      placeholder="e.g. 5,000"
+                      min="500"
+                      max="10000000"
+                      step="500"
+                      required
+                      aria-describedby="calc-helper"
+                    />
+                  </div>
+                  <button type="submit" id="calculate-btn" class="button button-sand calc-submit-btn">
+                    Calculate My Savings <span>↗</span>
+                  </button>
+                </div>
+                <div class="calc-input-footer">
+                  <span id="calc-helper" class="calc-helper-text">Suitable for residential, commercial and industrial monthly bills (min. ₹500).</span>
+                  <div id="calc-error" class="calc-error-message" role="alert" aria-live="polite"></div>
+                </div>
+              </div>
+            </form>
+
+            <div id="calc-results" class="calc-results" aria-live="polite">
+              <div class="calc-results-header">
+                <span class="calc-results-kicker">Preliminary Estimate</span>
+                <span class="calc-results-status" id="calc-status-indicator">Ready to calculate</span>
+              </div>
+              <div class="calc-results-grid">
+                <div class="calc-result-tile">
+                  <span class="result-tile-label">Recommended Capacity</span>
+                  <div class="result-tile-value-wrap">
+                    <span class="result-tile-val" id="res-system-size">—</span>
+                    <span class="result-tile-unit" id="res-system-unit">kW</span>
+                  </div>
+                  <p class="result-tile-sub">Estimated Solar System Size</p>
+                </div>
+
+                <div class="calc-result-tile">
+                  <span class="result-tile-label">Estimated Monthly Savings</span>
+                  <div class="result-tile-value-wrap">
+                    <span class="result-tile-val" id="res-monthly-savings">—</span>
+                  </div>
+                  <p class="result-tile-sub">~80% energy charge reduction</p>
+                </div>
+
+                <div class="calc-result-tile highlight">
+                  <span class="result-tile-label">Estimated Annual Savings</span>
+                  <div class="result-tile-value-wrap">
+                    <span class="result-tile-val" id="res-annual-savings">—</span>
+                  </div>
+                  <p class="result-tile-sub">Projected 12-month savings</p>
+                </div>
+              </div>
+
+              <p class="calc-disclaimer">
+                <span>*</span> These figures are preliminary estimates based on assumed conditions (blended tariff of ₹8.00/kWh, ~85% energy charge portion, and ~120 kWh/kW/month average yield). Actual system capacity and savings depend on your electricity tariff, location, rooftop conditions and final system design.
+              </p>
+            </div>
+
+            <div class="calc-cta-panel">
+              <div class="calc-cta-copy">
+                <span class="cta-badge">Advanced Sizing</span>
+                <h3>Want a more personalized solar estimate?</h3>
+                <p>Explore your solar potential with a more detailed assessment tailored to your roof area, location, orientation and electricity usage.</p>
+              </div>
+              <div class="calc-cta-action">
+                <a class="button button-sand cta-plant-btn" href="design-your-own-plant.html">
+                  Explore Advanced Solar Calculator <span>↗</span>
+                </a>
+                <span class="cta-note">Detailed solar-planning preview</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="projects" class="projects page-section">
         <div class="section-label"><span>04</span>
           <p>Projects</p>
@@ -207,14 +304,22 @@
         </div>
         <div class="case-grid">
           <article class="case-card carport">
-            <div><span>Case study / 01</span>
+            <div>
+              <div class="case-card-top">
+                <span>Case study / 01</span>
+                <span class="image-disclaimer">Illustrative imagery</span>
+              </div>
               <h3>100 kW<br />Carport</h3>
               <p>CAPEX model</p>
             </div>
             <div class="case-number"><strong>₹86,720</strong><small>reported monthly saving</small></div>
           </article>
           <article class="case-card rooftop">
-            <div><span>Case study / 02</span>
+            <div>
+              <div class="case-card-top">
+                <span>Case study / 02</span>
+                <span class="image-disclaimer">Illustrative imagery</span>
+              </div>
               <h3>40 kW<br />Rooftop</h3>
               <p>OPEX model</p>
             </div>
@@ -235,11 +340,89 @@
         </div>
       </section>
 
-      <section class="clients page-section">
-        <p class="eyebrow">Trusted across sectors</p>
-        <div class="client-names">
-          <span>SYMBIOSIS</span><span>ZF</span><span>PRICOL</span><span>INLAKS<br />BUDHRANI</span><span>PARK
-            INFINIA</span>
+      <section id="clients" class="clients page-section">
+        <div class="clients-wrapper">
+          <div class="clients-header">
+            <div class="clients-header-left">
+              <p class="eyebrow">Trusted across sectors</p>
+              <h2>Organizations We've<br /><em>Worked With.</em></h2>
+            </div>
+            <div class="clients-header-right">
+              <p class="clients-intro">Clean energy infrastructure engineered for leading educational institutions, automotive manufacturing, healthcare trusts, and residential communities across India.</p>
+            </div>
+          </div>
+
+          <div class="clients-grid" role="list" aria-label="Organizations Opulence Power has worked with">
+            <article class="client-card" role="listitem">
+              <div class="client-card-header">
+                <span class="client-card-idx">01</span>
+                <span class="client-card-badge">Client</span>
+              </div>
+              <div class="client-name-box">
+                <span class="client-name client-name-md">SYMBIOSIS</span>
+              </div>
+              <div class="client-card-footer">
+                <span class="client-card-status">Official logo pending</span>
+              </div>
+            </article>
+
+            <article class="client-card" role="listitem">
+              <div class="client-card-header">
+                <span class="client-card-idx">02</span>
+                <span class="client-card-badge">Client</span>
+              </div>
+              <div class="client-name-box">
+                <span class="client-name client-name-lg">ZF</span>
+              </div>
+              <div class="client-card-footer">
+                <span class="client-card-status">Official logo pending</span>
+              </div>
+            </article>
+
+            <article class="client-card" role="listitem">
+              <div class="client-card-header">
+                <span class="client-card-idx">03</span>
+                <span class="client-card-badge">Client</span>
+              </div>
+              <div class="client-name-box">
+                <span class="client-name client-name-md">PRICOL</span>
+              </div>
+              <div class="client-card-footer">
+                <span class="client-card-status">Official logo pending</span>
+              </div>
+            </article>
+
+            <article class="client-card" role="listitem">
+              <div class="client-card-header">
+                <span class="client-card-idx">04</span>
+                <span class="client-card-badge">Client</span>
+              </div>
+              <div class="client-name-box">
+                <span class="client-name client-name-sm">INLAKS BUDHRANI</span>
+              </div>
+              <div class="client-card-footer">
+                <span class="client-card-status">Official logo pending</span>
+              </div>
+            </article>
+
+            <article class="client-card" role="listitem">
+              <div class="client-card-header">
+                <span class="client-card-idx">05</span>
+                <span class="client-card-badge">Client</span>
+              </div>
+              <div class="client-name-box">
+                <span class="client-name client-name-sm">PARK INFINIA</span>
+              </div>
+              <div class="client-card-footer">
+                <span class="client-card-status">Official logo pending</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="clients-notice">
+            <span class="clients-notice-dot" aria-hidden="true"></span>
+            <p>Temporary typographic placeholders displayed above. Official corporate brand marks will be integrated upon receipt of authorized high-resolution assets from client organizations.</p>
+          </div>
         </div>
       </section>
 

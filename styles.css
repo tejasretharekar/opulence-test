@@ -12,8 +12,19 @@ html {
 
 .topbar {
   position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  z-index: 1000 !important;
   transition: background-color 0.3s ease, border-color 0.3s ease;
   border-bottom: 1px solid transparent;
+}
+
+.brand,
+.menu-toggle {
+  flex-shrink: 0;
 }
 
 .topbar.scrolled {
@@ -403,4 +414,860 @@ html {
     margin-top: 6px;
   }
 }
+
+/* ==========================================================================
+   Task 3: Client Showcase & Image Placeholders
+   ========================================================================== */
+
+/* Project Case Study Illustrative Badges */
+.case-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.image-disclaimer {
+  display: inline-block;
+  font: 500 8.5px var(--mono);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #f0f4f2;
+  background: rgba(18, 35, 41, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 3px 8px;
+  border-radius: 2px;
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
+}
+
+/* Redesigned Clients Section */
+.clients {
+  background: #ece9e1 !important;
+  padding: 100px clamp(24px, 10vw, 160px) !important;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.clients-wrapper {
+  width: 100%;
+}
+
+.clients-header {
+  margin-left: 15.5%;
+  display: grid;
+  grid-template-columns: 1.15fr 0.75fr;
+  gap: 50px;
+  align-items: flex-end;
+  margin-bottom: 56px;
+}
+
+.clients-header .eyebrow {
+  margin-bottom: 16px;
+}
+
+.clients-header h2 {
+  font-size: clamp(34px, 3.8vw, 54px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--ink);
+}
+
+.clients-header h2 em {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.clients-intro {
+  color: #647373;
+  font-size: 13.5px;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 380px;
+}
+
+.clients-grid {
+  margin-left: 15.5%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.client-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 22px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 164px;
+  position: relative;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  box-sizing: border-box;
+}
+
+.client-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--sand);
+  box-shadow: 0 10px 24px rgba(24, 45, 53, 0.08);
+}
+
+.client-card-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.client-card-idx {
+  font: 500 10px var(--mono);
+  color: #8a9996;
+}
+
+.client-card-badge {
+  font: 500 8px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--ink-2);
+  background: rgba(217, 191, 136, 0.22);
+  border: 1px solid rgba(217, 191, 136, 0.45);
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.client-name-box {
+  margin: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 52px;
+  text-align: center;
+}
+
+.client-name {
+  font-family: var(--sans);
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: 1.5px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  display: block;
+}
+
+.client-name-lg {
+  font-size: 26px;
+  letter-spacing: 3px;
+}
+
+.client-name-md {
+  font-size: 16px;
+  letter-spacing: 1.8px;
+}
+
+.client-name-sm {
+  font-size: 13px;
+  letter-spacing: 1.2px;
+}
+
+.client-card-footer {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid rgba(216, 215, 208, 0.65);
+  padding-top: 10px;
+}
+
+.client-card-status {
+  font: 400 8.5px var(--mono);
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: #728381;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.client-card-status::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--sand);
+}
+
+.clients-notice {
+  margin-top: 32px;
+  margin-left: 15.5%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--line);
+  font: 400 11.5px var(--sans);
+  color: #647373;
+  line-height: 1.55;
+  border-radius: 2px;
+}
+
+.clients-notice-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sand);
+  flex-shrink: 0;
+}
+
+.clients-notice p {
+  margin: 0;
+}
+
+/* Responsiveness for Clients Section */
+@media(max-width: 1120px) {
+  .clients-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(max-width: 800px) {
+  .clients {
+    padding: 75px 24px !important;
+  }
+  .clients-header {
+    margin-left: 0;
+    display: block;
+    margin-bottom: 38px;
+  }
+  .clients-header h2 {
+    font-size: clamp(30px, 6vw, 42px);
+    letter-spacing: -1.5px;
+  }
+  .clients-intro {
+    margin-top: 16px;
+    max-width: 100%;
+    font-size: 13px;
+  }
+  .clients-grid {
+    margin-left: 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .client-card {
+    min-height: 148px;
+    padding: 18px 12px 14px;
+  }
+  .client-name-lg {
+    font-size: 22px;
+  }
+  .client-name-md {
+    font-size: 14.5px;
+  }
+  .client-name-sm {
+    font-size: 12px;
+  }
+  .clients-notice {
+    margin-left: 0;
+    margin-top: 22px;
+    font-size: 11px;
+    padding: 10px 14px;
+  }
+}
+
+@media(max-width: 500px) {
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+  .client-card {
+    min-height: 136px;
+    padding: 16px 14px;
+  }
+  .client-name-box {
+    min-height: 42px;
+    margin: 12px 0;
+  }
+}
+
+/* ==========================================================================
+   Task 4: Basic Homepage Solar Calculator
+   ========================================================================== */
+
+.calculator {
+  background: var(--cream) !important;
+  padding: 100px clamp(24px, 10vw, 160px) !important;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.calculator-wrapper {
+  width: 100%;
+}
+
+.calculator-header {
+  margin-left: 15.5%;
+  display: grid;
+  grid-template-columns: 1.15fr 0.75fr;
+  gap: 50px;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.calculator-header .eyebrow {
+  margin-bottom: 16px;
+}
+
+.calculator-header h2 {
+  font-size: clamp(34px, 3.8vw, 54px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--ink);
+}
+
+.calculator-header h2 em {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.calculator-intro {
+  color: #647373;
+  font-size: 13.5px;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 400px;
+}
+
+.calculator-card {
+  margin-left: 15.5%;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 42px 46px;
+  border-radius: 2px;
+  box-shadow: 0 4px 20px rgba(24, 45, 53, 0.03);
+}
+
+.calc-label {
+  display: block;
+  font: 600 11.5px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--ink-2);
+  margin-bottom: 12px;
+}
+
+.calc-input-wrapper {
+  display: flex;
+  gap: 14px;
+  align-items: stretch;
+  position: relative;
+}
+
+.calc-input-field-wrap {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.calc-currency-symbol {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font: 700 18px var(--sans);
+  color: var(--sand);
+  pointer-events: none;
+  z-index: 2;
+  line-height: 1;
+}
+
+.calc-input {
+  width: 100%;
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  padding: 15px 18px 15px 38px;
+  font: 700 18px var(--sans);
+  color: var(--ink);
+  border-radius: 2px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.calc-input:focus {
+  border-color: var(--sand);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(217, 191, 136, 0.25);
+}
+
+.calc-input[aria-invalid="true"] {
+  border-color: #c94a38;
+  box-shadow: 0 0 0 3px rgba(201, 74, 56, 0.15);
+}
+
+.calc-submit-btn {
+  padding: 15px 28px;
+  white-space: nowrap;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.calc-input-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 10px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.calc-helper-text {
+  font-size: 11.5px;
+  color: #728381;
+  line-height: 1.5;
+}
+
+.calc-error-message {
+  font: 600 11.5px var(--sans);
+  color: #c94a38;
+  line-height: 1.5;
+  display: none;
+}
+
+.calc-error-message.visible {
+  display: block;
+}
+
+.calc-results {
+  margin-top: 36px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.calc-results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.calc-results-kicker {
+  font: 500 10px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #728381;
+}
+
+.calc-results-status {
+  font: 500 10px var(--mono);
+  color: #8a9996;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+}
+
+.calc-results-status.active {
+  color: var(--ink);
+  background: rgba(217, 191, 136, 0.25);
+  border: 1px solid rgba(217, 191, 136, 0.45);
+}
+
+.calc-results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.calc-result-tile {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  padding: 24px 20px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 2px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calc-result-tile:hover {
+  transform: translateY(-2px);
+  border-color: var(--sand);
+  box-shadow: 0 8px 24px rgba(24, 45, 53, 0.06);
+}
+
+.calc-result-tile.highlight {
+  background: linear-gradient(135deg, #ffffff 65%, rgba(217, 191, 136, 0.12));
+  border-color: rgba(217, 191, 136, 0.65);
+}
+
+.result-tile-label {
+  font: 500 10px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #728381;
+}
+
+.result-tile-value-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin: 12px 0 8px;
+}
+
+.result-tile-val {
+  font-size: clamp(26px, 2.5vw, 36px);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.result-tile-unit {
+  font: 500 13px var(--mono);
+  color: #728381;
+  text-transform: uppercase;
+}
+
+.result-tile-sub {
+  font-size: 11px;
+  color: #647373;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.calc-disclaimer {
+  margin: 24px 0 0;
+  padding: 12px 16px;
+  background: rgba(24, 45, 53, 0.03);
+  border-left: 2px solid var(--sand);
+  font-size: 11px;
+  line-height: 1.6;
+  color: #728381;
+  border-radius: 0 2px 2px 0;
+}
+
+.calc-disclaimer span {
+  color: var(--sand);
+  font-weight: 700;
+  margin-right: 2px;
+}
+
+.calc-cta-panel {
+  margin-top: 36px;
+  padding: 28px 32px;
+  background: var(--ink);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+  border-radius: 2px;
+}
+
+.cta-badge {
+  font: 500 9px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--sand);
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.calc-cta-copy h3 {
+  font-size: 18px;
+  margin: 0 0 6px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+}
+
+.calc-cta-copy p {
+  font-size: 12px;
+  color: #c2cecb;
+  margin: 0;
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+.calc-cta-action {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.cta-plant-btn {
+  white-space: nowrap;
+  font-size: 11px;
+  padding: 13px 20px;
+}
+
+.cta-note {
+  font: 9px var(--mono);
+  color: #9bb0aa;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  display: block;
+  margin-top: 6px;
+}
+
+/* Responsiveness for Calculator */
+@media(max-width: 960px) {
+  .calc-input-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .calc-input-field-wrap {
+    width: 100%;
+  }
+  .calc-submit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .calc-results-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .calc-cta-panel {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px 20px;
+  }
+  .calc-cta-action {
+    width: 100%;
+    text-align: left;
+  }
+  .cta-plant-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .cta-note {
+    text-align: left;
+  }
+}
+
+@media(max-width: 800px) {
+  .calculator {
+    padding: 75px 24px !important;
+  }
+  .calculator-header {
+    margin-left: 0;
+    display: block;
+    margin-bottom: 34px;
+  }
+  .calculator-header h2 {
+    font-size: clamp(30px, 6vw, 42px);
+    letter-spacing: -1.5px;
+  }
+  .calculator-intro {
+    margin-top: 14px;
+    max-width: 100%;
+    font-size: 13px;
+  }
+  .calculator-card {
+    margin-left: 0;
+    padding: 26px 18px;
+  }
+}
+
+/* ==========================================================================
+   Final UI Refinements
+   ========================================================================== */
+
+/* Change 1: Increase section-identifying heading and label font sizes */
+.section-label span {
+  font: 600 13px var(--mono) !important;
+  color: #899796;
+}
+
+.section-label p {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1.8px !important;
+  font: 600 13px var(--mono) !important;
+  color: #718285;
+}
+
+.eyebrow {
+  font: 600 12px var(--mono) !important;
+  letter-spacing: 1.8px !important;
+  margin-bottom: 18px !important;
+}
+
+.about h2,
+.section-heading h2,
+.models h2,
+.project-header h2,
+.contact h2,
+.team-heading h2,
+.clients-header h2,
+.calculator-header h2,
+.process-intro h2 {
+  font-size: clamp(38px, 4.4vw, 64px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -2px !important;
+  font-weight: 600 !important;
+}
+
+/* Change 2 & 3: Mobile Header Stabilization and Contact Alignment */
+@media(max-width: 800px) {
+  html {
+    scroll-padding-top: 70px;
+  }
+
+  /* Fix 1: Mobile Header Stabilization */
+  .topbar {
+    height: 70px !important;
+    min-height: 70px !important;
+    max-height: 70px !important;
+    padding: 0 22px !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .brand-logo {
+    display: block;
+    height: auto;
+  }
+
+  .menu-toggle {
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Fix 2: Prevent hero content & CTA overlap; flow statistics naturally */
+  .hero {
+    min-height: auto !important;
+    padding-top: 125px !important;
+    padding-bottom: 56px !important;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap !important;
+    gap: 18px !important;
+    margin-top: 32px !important;
+  }
+
+  .hero-bottom {
+    position: static !important;
+    margin-top: 44px !important;
+    left: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 18px !important;
+  }
+
+  .hero-bottom div {
+    min-width: 0 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+    padding: 12px 0 0 !important;
+  }
+
+  .stat-number {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    display: block !important;
+    margin-bottom: 4px !important;
+  }
+
+  .hero-bottom small {
+    font-size: 10.5px !important;
+    line-height: 1.4 !important;
+    color: #d4dcda !important;
+    display: block !important;
+  }
+
+  .about h2,
+  .section-heading h2,
+  .models h2,
+  .project-header h2,
+  .contact h2,
+  .team-heading h2,
+  .clients-header h2,
+  .calculator-header h2,
+  .process-intro h2 {
+    font-size: clamp(32px, 6vw, 42px) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -1.2px !important;
+  }
+
+  /* Change 3: Restore balanced horizontal inset for Contact section on mobile */
+  .contact {
+    padding-left: clamp(20px, 5vw, 24px) !important;
+    padding-right: clamp(20px, 5vw, 24px) !important;
+    margin-left: 0 !important;
+    display: block !important;
+    box-sizing: border-box !important;
+  }
+
+  .contact-location {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    margin-top: 48px !important;
+    padding-top: 36px !important;
+  }
+
+  .map-visual {
+    height: 240px;
+    max-width: 100%;
+  }
+}
+
+/* Narrow mobile layout for hero statistics (<= 560px) */
+@media(max-width: 560px) {
+  .hero-bottom {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .hero-bottom div {
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 16px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.28) !important;
+    padding: 12px 0 0 !important;
+    min-width: 0 !important;
+  }
+
+  .stat-number {
+    font-size: 24px !important;
+    min-width: 56px !important;
+    flex-shrink: 0 !important;
+    line-height: 1 !important;
+    letter-spacing: -0.5px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .hero-bottom small {
+    font-size: 11.5px !important;
+    line-height: 1.45 !important;
+    color: #d4dcda !important;
+    display: block !important;
+  }
+}
+
 
