@@ -30,13 +30,17 @@ form.addEventListener('submit', (event) => {
 });
 
 const topbar = document.querySelector('.topbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 10) {
-    topbar.classList.add('scrolled');
-  } else {
-    topbar.classList.remove('scrolled');
-  }
-});
+if (topbar) {
+  const handleScroll = () => {
+    if (window.scrollY > 10) {
+      topbar.classList.add('scrolled');
+    } else {
+      topbar.classList.remove('scrolled');
+    }
+  };
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+}
 
 // ==========================================================================
 // Task 4: Basic Homepage Solar Calculator
